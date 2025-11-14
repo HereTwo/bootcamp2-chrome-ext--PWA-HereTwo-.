@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Note Saver PWA</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#0b63d6"/>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="app">
+    <header><h1>Note Saver PWA</h1></header>
+    <section class="editor">
+      <textarea id="note" placeholder="Escreva sua nota..." rows="6"></textarea>
+      <div class="controls">
+        <button id="saveNote" class="btn">Salvar</button>
+        <button id="clearNote" class="btn outline">Limpar</button>
+        <button id="syncServer" class="btn">Sync servidor</button>
+      </div>
+      <div id="status" class="status" aria-live="polite"></div>
+    </section>
+    <section id="notesContainer" class="notes-container">
+      <h2>Notas</h2>
+      <ul id="noteList" class="note-list"></ul>
+    </section>
+    <footer><small>Instale como PWA (menu do navegador) — Note Saver</small></footer>
+  </main>
+  <script src="/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js').then(()=>console.log('SW registado'));
+    }
+  </script>
+</body>
+</html>

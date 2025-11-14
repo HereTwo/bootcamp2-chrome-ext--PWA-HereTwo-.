@@ -1,0 +1,11 @@
+.app{max-width:900px;margin:18px auto;font-family:system-ui,Segoe UI,Roboto,Arial;color:#111;padding:12px}
+header h1{margin:0 0 12px 0}
+textarea{width:100%;box-sizing:border-box;padding:8px;border-radius:6px;border:1px solid #ddd;font-size:14px}
+.controls{display:flex;gap:8px;margin-top:8px}
+.btn{padding:8px 10px;border-radius:6px;border:none;background:#0b63d6;color:#fff;cursor:pointer}
+.btn.outline{background:transparent;border:1px solid #0b63d6;color:#0b63d6}
+.status{height:22px;margin-top:8px;color:#0b63d6}
+.notes-container{margin-top:16px}
+.note-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.note-item{padding:10px;border-radius:6px;border:1px solid #eee;background:#fafafa;display:flex;flex-direction:column}
+.note-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:8px}
